@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Manrope:wght@200..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+
+}
+
+body{ 
+  background-color:hsl(218, 23%, 16%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card-container{
+  height: 20rem;
+  width: 35rem;
+  border-radius: 15px;
+  background-color: hsl(217, 19%, 24%);
+  display:flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:2rem;
+}
+
+.card-container h3{
+  color:hsl(150, 100%, 66%) ;
+  position: absolute;
+  top: 2rem;
+  letter-spacing: 5px;
+  font-weight: 800;
+  font-size:14px;
+}
+.card-container p{ 
+  max-width:30rem ;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  top:6rem;
+  color: hsl(193, 38%, 86%);
+  letter-spacing: 1px;
+}
+.card-container .img-container{
+  position: absolute;
+  bottom: 4rem;
+}
+
+
+.card-container .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: hsl(150, 100%, 66%);
+  position: absolute;
+  bottom: -30px;
+  transition: transform 0.2s ease;
+}
+
+.card-container .footer:hover{
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+
+.card-container .footer::before {
+  content: "";
+  position: absolute;
+  inset: -32px;
+  background: radial-gradient(
+    circle,
+    rgba(77, 255, 154, 0.7),
+    transparent 10%
+  );
+  opacity: 0;
+  filter: blur(24px);
+  transition: opacity 0.3s ease;
+}
+
+.card-container .footer:hover::before {
+  opacity: 1;
+}
+
+.card-container .footer:hover {
+  box-shadow:
+    0 0 20px rgba(77, 255, 154, 0.9),
+    0 0 40px rgba(77, 255, 154, 0.6),
+    0 0 80px rgba(77, 255, 154, 0.4);
+  transform: scale(1.01);
+}
+
+.info-coder{
+  margin-top: 5rem;
+}
